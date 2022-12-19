@@ -1,3 +1,15 @@
+## App Demo
+[live demo](https://user-images.githubusercontent.com/69638013/208470065-4df545eb-303d-40bd-a1c3-b83c3211b3f6.mp4)
+
+## INSTRUCTIONS ON HOW TO CLONE REPOSITORY:
+- You can clone this repo by typing git clone https://github.com/prolajumokeoni/react-hooks on your terminal.
+- Type cd react-hooks to access the project on the terminal
+- Run `npm i` to install  and `npm start` to start the application
+
+<br />
+<br />
+<br />
+
 ## QUESTION 1:  Explain the main hooks in React and give examples
 
 Hooks were introduced in React 16.8, Hooks are functions that let you “hook into” React state and lifecycle features from functional components.
@@ -25,14 +37,14 @@ Hooks can only be called inside a React Functional Component and  at the top lev
 
 ## QUESTION 2: Walk me through useState, useEffect and UseContext
 
-# To use useState in this example:
+## To use useState in this example:
 - [ ] import React, { useState } from 'react';
 - [ ] Destructure the array count(current value) and setCount(set value)
 - [ ] Update state in the function using the setCount value`
 
 ![Screenshot_564](https://user-images.githubusercontent.com/69638013/208421985-75082a14-7b1b-4782-9621-e0908e905427.png)
 
-# To use useEffect in this example:
+## To use useEffect in this example:
 - [ ] import React, { useState, useEffect } from 'react';
 - [ ] create a callback function
 - [ ] set the state variable as a dependency of the hook.  
@@ -41,7 +53,7 @@ This will execute the code under the callback every time the value of our state 
 
 ![Screenshot_565](https://user-images.githubusercontent.com/69638013/208421980-2a0c49dd-4d6f-40cf-8833-f063a557004e.png)
 
-# To use useContext in this example: 
+## To use useContext in this example: 
  
 - [ ] import React, { useContext } from 'react';
 - [ ] Create a  usecontext hook that can be called in a function (const ThemeContext = React.createContext(themes.light);)
@@ -77,7 +89,7 @@ A Function component also returns HTML, and behaves much the same way as a Class
 - [ ] In your component folder create a file called `Welcome.js` this is the component name in your `Welcome.js`
   - [ ] After you have created your component dont forget to import in your `App.js`
 	
-# write  the code below to create a functional or class based component
+## write  the code below to create a functional or class based component
 ## Here's an example of a simple functional component in React:
 
 ```
@@ -98,3 +110,8 @@ class Welcome extends React.Component {
 
 
 REFERENCE: [React Js Documentation](https://reactjs.org/)
+
+
+
+
+
