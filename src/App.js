@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./component/Login";
 import Counter from "./component/Counter";
+import './App.css'
 
 function App() {
   return (

@@ -21,17 +21,17 @@ function Counter() {
 
   return (
     <div className="container">
-      <div className="btn-conrainer">
+      <div className="btn-container">
         <h3>Counter: {counter}</h3>
         <button onClick={increment}>Increment</button>
+        <br />
         <button onClick={decrement}>Decrement</button>
       </div>
       <label>
-        Add your input:
+        Add your input number:
         <input type="number" value={amount} onChange={handleChange} />
       </label>
       <button onClick={handleSubmit}>Add to current counter</button>
-      <p>Counter: {counter}</p>
     </div>
   );
 }

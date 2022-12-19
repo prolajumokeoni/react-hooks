@@ -31,7 +31,7 @@ function Login() {
     <form onSubmit={handleSubmit} className="form-wrapper">
       <label>
         Username:
-        <input type="text" value={username} onChange={handleUsernameChange} />
+        <input type="text" value={username} onChange={handleUsernameChange} required />
       </label>
       <br />
       <label>
@@ -40,6 +40,7 @@ function Login() {
           type="email"
           value={email}
           onChange={handleEmailChange}
+          required
         />
       </label>
       <br />
@@ -49,6 +50,7 @@ function Login() {
           type="password"
           value={password}
           onChange={handlePasswordChange}
+          required
         />
       </label>
       <br />

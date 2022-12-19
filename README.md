@@ -3,7 +3,7 @@
 
 ## INSTRUCTIONS ON HOW TO CLONE REPOSITORY:
 - You can clone this repo by typing git clone https://github.com/prolajumokeoni/react-hooks on your terminal.
-- Type cd react-hooks to access the project on the terminal
+- Type cd `react-hooks` to access the project on the terminal
 - Run `npm i` to install  and `npm start` to start the application
 
 <br />

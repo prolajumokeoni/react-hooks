@@ -3,11 +3,8 @@
  width: 50%;
 }
 
-.btn-conrainer {
+.btn-container {
   display: flex;
+  align-items: center;
   margin: 10px 0;
-}
-
-button {
-  margin: 10px;
 }
