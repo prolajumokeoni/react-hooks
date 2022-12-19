@@ -1,0 +1,13 @@
+.container {
+ margin: 100px auto;
+ width: 50%;
+}
+
+.btn-conrainer {
+  display: flex;
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px;
+}
