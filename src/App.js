@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import Counter from "./Counter";
+import Login from "./component/Login";
+import Counter from "./component/Counter";
 
 function App() {
   return (
