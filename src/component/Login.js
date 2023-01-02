@@ -3,30 +3,27 @@ import { Navigate } from "react-router-dom";
 import "./Login.css";
 import FormInput from "../component/Form-input";
 
-function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+const defaultFormFields = {
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
+
+const Login = () => {
+  const [formFields, setFormFields] = useState(defaultFormFields);
+  const { username, email, password, confirmPassword } = formFields;
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormFields({ ...formFields, [name]: value });
   };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-  const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
-  }
-
-  const handleSubmit = (event) => {
+  const handleSubmit =  (event) => {
     event.preventDefault();
-    if(password !== confirmPassword) {
+    if (password !== confirmPassword) {
       alert("password do not match");
       return;
     }
@@ -37,45 +34,47 @@ function Login() {
     return <Navigate to="/counter" />;
   }
 
- 
-
   return (
     <form onSubmit={handleSubmit} className="form-wrapper">
       <FormInput
         label="Name"
+        name="username"
         type="text"
+        onChange={handleChange}
         value={username}
-        onChange={handleUsernameChange}
         required
       />
       <br />
       <FormInput
         label="Email"
+        name="email"
         type="email"
         value={email}
-        onChange={handleEmailChange}
+        onChange={handleChange}
         required
       />
       <br />
       <FormInput
-      label="password"
+        label="password"
+        name="password"
         type="password"
         value={password}
-        onChange={handlePasswordChange}
+        onChange={handleChange}
         required
       />
       <br />
       <FormInput
-      label="Confirm password"
+        label="Confirm password"
+        name="confirmPassword"
         type="password"
         value={confirmPassword}
-        onChange={handleConfirmPasswordChange}
+        onChange={handleChange}
         required
       />
       <br />
       <button type="submit">Log In</button>
     </form>
   );
-}
+};
 
 export default Login;
