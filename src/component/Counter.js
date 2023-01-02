@@ -1,23 +1,36 @@
 import React, { useState } from "react";
 import "./Counter.css";
 
-function Counter() {
+const defaultAmount = {
+amount: 0,
+}
+
+const Counter = () => {
   const [counter, setCounter] = useState(0);
-  const [amount, setAmount] = useState(0);
+  const [amountValue, setAmountValue] = useState(defaultAmount);
+  const { amount } = amountValue;
 
   const increment = () => setCounter(counter + 1);
   const decrement = () => setCounter(counter - 1);
-  const add = () => setCounter(counter + amount);
+  const add = () => setCounter(counter + amountValue);
+  const reset = () => setCounter(0)
+
+  const resetInput = () => {
+    setAmountValue(defaultAmount);
+  }
 
   const handleChange = (event) => {
     const { value } = event.target;
-    setAmount(Number(value));
+    setAmountValue(Number( value ));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     add();
+    resetInput();
   };
+
+ 
 
   return (
     <div className="container">
@@ -26,10 +39,11 @@ function Counter() {
         <button onClick={increment}>Increment</button>
         <br />
         <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>reset</button>
       </div>
       <label>
         Add your input number:
-        <input type="number" value={amount} onChange={handleChange} />
+        <input type="number" name="amount" value={amount} onChange={handleChange} />
       </label>
       <button onClick={handleSubmit}>Add to current counter</button>
     </div>
